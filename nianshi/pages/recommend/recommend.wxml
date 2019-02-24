@@ -1,2 +1,47 @@
-<!--pages/recommend/recommend.wxml-->
-<button open-type="getUserInfo">获取权限</button>
+<!--index.wxml-->
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" >
+  <swiper class="swiper-block" previous-margin="90rpx" next-margin="90rpx" current="{{swiperIndex}}" autoplay="{{autoplay}}">
+    <block wx:for="{{imgUrls}}" wx:index="{{index}}">
+      <swiper-item class="swiper-item" bindtap='bindActTap'>
+        <image mode="aspectFill" src="{{item.src}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
+        <view>{{item.text}}</view>
+      </swiper-item>
+    </block>
+  </swiper>                                  
+
+  <view>
+    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+      <view class="feed-item" bindtap='bindIndexTap'>
+        <view class="feed-source">
+          <view class="pic">
+            <image src="{{item.article_img}}" mode='scaleToFill'></image>
+          </view>
+          <view class="inform">
+            <view class='title_block'>
+              <text class='title'>{{item.article_name}}</text>
+            </view>
+            <view class='inform-bottomleft'>
+              <view class='block'>
+                <text class="author">{{item.author_name}}</text>
+              </view>
+              <view class="good">
+                <view catchtap='bindLikeTap' class='block' hover-stop-propagation='false'>
+                  <image src='../../images/like.png' />
+                </view>
+                <view class='block'>
+                  <text>{{item.good_num}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="feedContent">
+          <text>{{item.article_outline}}</text>
+          <view class="moreInformation">
+            <image mode="scaleToFill" src='../../images/triangle.png' style='height:50rpx;width:50rpx'></image>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>

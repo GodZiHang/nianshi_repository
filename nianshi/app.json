@@ -1,13 +1,46 @@
 {
   "pages":[
+    "pages/mine/mine",
     "pages/me/me",
     "pages/article/article",
     "pages/info/info",
+    "pages/upload/upload",
     
-    "pages/upload/upload"
+    "pages/year/year",
+    "pages/affair/affair",
+    "pages/recommend/recommend"
     ],
   "window":{
     "navigationBarBackgroundColor": "#99cf66"
+  },
+  "tabBar": {
+    "color": "grey",
+    "selectedColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "荐",
+        "iconPath": "images/re.png",
+        "selectedIconPath": "images/re.png"
+      },
+      {
+        "pagePath": "pages/year/year",
+        "text": "年",
+        "iconPath": "images/ye.png",
+        "selectedIconPath": "images/ye.png"
+      },
+      {
+        "pagePath": "pages/affair/affair",
+        "text": "事",
+        "iconPath": "images/af.png",
+        "selectedIconPath": "images/af.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我",
+        "iconPath": "images/mi.png",
+        "selectedIconPath": "images/mi.png"
+      }
+    ]
   }
-
 }

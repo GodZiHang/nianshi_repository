@@ -1,16 +1,20 @@
 {
-  "pages":[
+  "pages": [
+    "pages/year/year",
+    "pages/articleList/articleList",
+    "pages/recommend/recommend",
+    
     "pages/mine/mine",
     "pages/me/me",
     "pages/article/article",
     "pages/info/info",
     "pages/upload/upload",
     "pages/activity/activity",
-    "pages/year/year",
-    "pages/affair/affair",
-    "pages/recommend/recommend"
-    ],
-  "window":{
+
+    "pages/affair/affair"
+    
+  ],
+  "window": {
     "navigationBarBackgroundColor": "#99cf66"
   },
   "tabBar": {
